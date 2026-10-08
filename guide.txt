@@ -1,0 +1,67 @@
+System Concept
+
+The user can:
+
+Create a fitness plan for a future week
+Choose workout days
+Add exercises
+Set target sets, reps, weight, duration, etc.
+Assign priorities
+Record completed workouts
+Record what they actually accomplished
+Compare planned vs. actual performance
+Track progress
+Keep workout history
+Calculate completion rates, total workouts, sets, reps, duration, etc.
+View summaries
+Weekly summary
+Monthly summary
+Progress between planned and completed workouts
+How the data flows
+                 USER INPUT
+                     │
+          ┌──────────┴──────────┐
+          ↓                     ↓
+   FUTURE WORKOUTS         COMPLETED WORKOUTS
+      (Planner)                (Tracker)
+          │                     │
+          └──────────┬──────────┘
+                     ↓
+              FITNESS DATA
+                     │
+                     ↓
+            DATA STRUCTURES
+                     │
+          ┌──────────┼──────────┐
+          ↓          ↓          ↓
+        Search     Schedule   Priority
+        History    Planning   Management
+          │          │          │
+          └──────────┼──────────┘
+                     ↓
+                ALGORITHMS
+                     │
+                     ↓
+            PROGRESS ANALYSIS
+                     │
+          ┌──────────┴──────────┐
+          ↓                     ↓
+     WEEKLY SUMMARY        MONTHLY SUMMARY
+Data Structure Utilization
+Required Structure	Utilization in the Fitness System
+Array	Stores the user's workout history and allows traversal for weekly/monthly calculations
+Linked List	Stores the exercises belonging to a particular workout plan, allowing exercises to be added/removed
+Stack	Stores recent changes to a workout plan so the user can undo the latest action
+Queue	Manages upcoming scheduled workouts in chronological order
+Binary Search Tree	Organizes workout/exercise records so the system can search for specific records
+Heap / Priority Queue	Determines which planned workout has the highest priority
+Hash Table	Provides fast lookup of exercises/workouts using IDs or names
+Graph	Represents relationships between workout days, exercises, or muscle groups
+
+
+
+// Log-in / Sign-up
+// Dashboard -> calendar 
+// Dashboard -> Personal Info, calendar (for summary of workout), to do (system provided check box)
+// Dashboard -> workout History (track based on the checkbox in the todo)
+// Identify -> suggested workout based on the weight goal and BMI
